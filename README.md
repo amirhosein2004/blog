@@ -1,7 +1,12 @@
-this is a weblog project
+# Weblog Project
 
-run this project with:
-  python manage.py runserver
+This is a weblog project.
+
+## How to Run
+
+To run this project, use the following command:
+
+python manage.py runserver
 
 ## Features
 
