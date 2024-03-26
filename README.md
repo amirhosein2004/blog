@@ -1,9 +1,10 @@
-This A shop Project that is been createy By python
-Author: Amirb
+this is a weblog project
 
-Features
+run this project with:
+  python manage.py runserver
 
-user register
-user shopping history
-responsive
-ultimate security 
+  in this project we can:
+    -create posr
+    -update post
+    -login & logout & register 
+    -serach posts base on topics
