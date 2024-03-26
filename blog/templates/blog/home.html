@@ -1,0 +1,91 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<style>
+    /* Style for the container of topics and posts */
+    .post-topic-blog {
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+        gap: 20px; /* Add some space between columns */
+    }
+
+    /* Style for the card containing each post */
+    .card {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        transition: box-shadow 0.3s;
+    }
+
+    /* Add shadow effect on hover */
+    .card:hover {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Style for post titles */
+    .post-title {
+        font-weight: bold;
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+
+    /* Style for post body */
+    .post-body {
+        margin-bottom: 10px;
+    }
+
+    /* Style for post image */
+    .post-image {
+        max-width: 100%;
+        height: auto;
+        margin-top: 10px;
+        border-radius: 5px;
+    }
+
+    /* Style for create new post button */
+    .create-post-btn {
+        margin-top: 20px;
+    }
+</style>
+
+<div class="post-topic-blog">
+    <div>
+        <!-- Topics section -->
+        <p>Topics:</p>
+        {% include 'blog/topics.html' %}
+    </div>
+
+    <div>
+        <!-- Posts section -->
+        <br>
+        {% for post in posts %}
+        <a href="{% url 'postpage' post.id %}">
+            <div class="card">
+                <div class="card-body">
+                    <p class="post-title">{{post.name}}</p>
+                    <p class="post-body">{{post.body}}</p>
+                    <hr>
+                    <img src="{{post.image.url}}" class="post-image">
+                </div>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+
+    <div>
+        <!-- Create new post button -->
+        <br>
+        <a href="{% url 'createpost' %}">
+            <button type="button" class="btn btn-primary create-post-btn">Create New Post</button>
+        </a>
+    </div>
+</div>
+
+{% endblock %}
+}
+
+
+
+
+

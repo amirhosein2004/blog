@@ -1,0 +1,14 @@
+<ul class="nav nav-pills">
+    <li class="nav-item">
+        <a class="nav-link active" href="{% url 'home' %}">All</a>
+        <span class="badge badge-secondary">{{ all_posts }}</span>
+    </li>
+    {% for topic in topics %}
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'home' %}?q={{ topic.name }}">{{ topic.name }}</a>
+            <span class="badge badge-secondary">{{ topic.post_set.all.count }}</span>
+        </li>
+    {% endfor %}
+</ul>
+<br>
+<a href="{% url 'topicpage' %}" class="btn btn-primary">More Topics</a>
