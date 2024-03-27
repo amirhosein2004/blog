@@ -17,4 +17,4 @@ In this project, we can:
 - Perform login, logout, and registeration
 - Search posts based on topics
 
-also media files can save in arvan cloud
+Additionally, media files can be saved in Arvan Cloud.
