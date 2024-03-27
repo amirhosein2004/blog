@@ -149,8 +149,8 @@ STORAGES = {"default": {"BACKEND": "storages.backends.s3boto3.S3Boto3Storage"},
             "staticfiles": {"BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage",},
             }
 AWS_S3_ENDPOINT_URL = "https://storage.iran.liara.space"
-AWS_S3_ACCESS_KEY_ID = "updnge2717rdfi70"
-AWS_S3_SECRET_ACCESS_KEY = "885556b2-c889-45fb-b9a7-4929fcadd954"
-AWS_STORAGE_BUCKET_NAME = "wweebbllooggbucket"
+AWS_S3_ACCESS_KEY_ID = "access key"
+AWS_S3_SECRET_ACCESS_KEY = "secret key"
+AWS_STORAGE_BUCKET_NAME = "name bucket"
 AWS_S3_FILE_OVERWRITE = False
 
