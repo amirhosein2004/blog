@@ -16,3 +16,5 @@ In this project, we can:
 - Update posts
 - Perform login, logout, and registeration
 - Search posts based on topics
+
+also media files can save in arvan cloud
